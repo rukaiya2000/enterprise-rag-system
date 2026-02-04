@@ -12,4 +12,5 @@ for file_path in PROCESSED_FOLDER.iterdir():
         for field in REQUIRED_FIELDS:
             assert field in chunk, f"{field} missing in {file_path.name}"
         assert len(chunk["text"]) > 50, f"Chunk too short in {file_path.name}"
+        
 print("============ All files validated successfully! ============")
